@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to match Security X design brief */
+  --background: #1f2937; /* Dark Gray for overall background */
+  --foreground: #ffffff; /* White for primary text */
+  --card: #2d3748; /* Slightly lighter gray for cards */
+  --card-foreground: #ffffff; /* White for card text */
+  --popover: #2d3748; /* Dark background for popovers */
+  --popover-foreground: #ffffff; /* White for popover text */
+  --primary: #0891b2; /* Cyan for call-to-action buttons */
+  --primary-foreground: #ffffff; /* White text on primary buttons */
+  --secondary: #4b5563; /* Gray for secondary actions */
+  --secondary-foreground: #ffffff; /* White text on secondary actions */
+  --muted: #4b5563; /* Muted text for less important information */
+  --muted-foreground: #d1d5db; /* Light gray for muted text */
+  --accent: #2563eb; /* Blue for highlighting alerts */
+  --accent-foreground: #ffffff; /* White text on accent elements */
+  --destructive: #e53e3e; /* Red for error messages */
+  --destructive-foreground: #ffffff; /* White text for destructive actions */
+  --border: #4b5563; /* Gray for borders between sections */
+  --input: #2d3748; /* Dark background for input fields */
+  --ring: #0891b2; /* Cyan for focus rings on inputs */
+  --chart-1: #38b2ac; /* Teal for first chart color */
+  --chart-2: #f6e05e; /* Yellow for second chart color */
+  --chart-3: #fc8181; /* Light Red for third chart color */
+  --chart-4: #63b3ed; /* Light Blue for fourth chart color */
+  --chart-5: #b794f4; /* Light Purple for fifth chart color */
+  --radius: 0.5rem; /* Rounded corners for buttons and cards */
+  --sidebar: #2d3748; /* Dark background for sidebar */
+  --sidebar-foreground: #ffffff; /* White text for sidebar */
+  --sidebar-primary: #4b5563; /* Gray for primary sidebar items */
+  --sidebar-primary-foreground: #ffffff; /* White text for primary sidebar items */
+  --sidebar-accent: #2563eb; /* Blue for accent sidebar items */
+  --sidebar-accent-foreground: #ffffff; /* White text for accent sidebar items */
+  --sidebar-border: #4b5563; /* Gray for sidebar borders */
+  --sidebar-ring: #0891b2; /* Cyan for focus rings in sidebar */
+}
+
+.dark {
+  /* Dark mode uses same colors as they're already dark-optimized */
+  --background: #1f2937;
+  --foreground: #ffffff;
+  --card: #2d3748;
+  --card-foreground: #ffffff;
+  --popover: #2d3748;
+  --popover-foreground: #ffffff;
+  --primary: #0891b2;
+  --primary-foreground: #ffffff;
+  --secondary: #4b5563;
+  --secondary-foreground: #ffffff;
+  --muted: #4b5563;
+  --muted-foreground: #d1d5db;
+  --accent: #2563eb;
+  --accent-foreground: #ffffff;
+  --destructive: #e53e3e;
+  --destructive-foreground: #ffffff;
+  --border: #4b5563;
+  --input: #2d3748;
+  --ring: #0891b2;
+  --chart-1: #38b2ac;
+  --chart-2: #f6e05e;
+  --chart-3: #fc8181;
+  --chart-4: #63b3ed;
+  --chart-5: #b794f4;
+  --sidebar: #2d3748;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #4b5563;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2563eb;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #4b5563;
+  --sidebar-ring: #0891b2;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
